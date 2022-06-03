@@ -19,7 +19,7 @@ public class TwoSum {
 		
 		for(int i = 0; i < nums.length; i++) {
 			for(int k = 0; k < nums.length; k++) {
-			if(nums[k] + nums[i] == target) {
+			if(nums[k] + nums[i] == target && k != i) {
 				tempArray[0] = k;
 				tempArray[1] = i;
 			}
