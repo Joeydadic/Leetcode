@@ -17,15 +17,15 @@ public class TwoSum {
 	static public int[] twoSum(int[] nums, int target) {
 		int[] tempArray = new int[2]; // Create a temporary array to store value.
 		
-		for(int i = 0; i < nums.length; i++) {
-			for(int k = 0; k < nums.length; k++) {
-			if(nums[k] + nums[i] == target && k != i) {
-				tempArray[0] = k;
+		for(int i = 0; i < nums.length; i++) { // Check the first index + the rest of the indices.
+			for(int k = 0; k < nums.length; k++) { // Second for loop, checks the rest of the indices with the first index.
+			if(nums[k] + nums[i] == target && k != i) { // Boolean statement to check if any two indices sums up to the target value.
+				tempArray[0] = k;					    // Additional check added to make sure its not the same index.
 				tempArray[1] = i;
 			}
 			}
 		}
-		return tempArray;
+		return tempArray;								//return appropriate indexes that fulfill requirements for target value.
 	}
 	public static void main(String[] args) {
 		/* Will create test cases for twoSum below */
